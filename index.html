@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header class="tituloPrincipal">
+        <div class="titleArea">
+            <img src="galeria/2026_FIFA_World_Cup.svg" alt="Copa do Mundo 2026" class="logoTitulo" />
+        </div>
+    </header>
+
+    <main>
+        <div class="cards-container">
+
+            <h2 class="secao-titulo">Área do Participante</h2>
+
+             <div class="cam-sair">
+                <img src="galeria/cam.png" id="btnFoto" class="icon ocultar" />
+                <img src="galeria/turnoff.png" id="btnLogout" class="icon ocultar" />
+            </div>
+
+            <div class="cards-bloco">
+
+                <div id="cardLogin" class="card">
+                    <a href="#" class="linkCard" id="exibir-form">
+                    <img id="card-user-foto" src="galeria/user.png" alt="Login" class="img-card">
+                    <span id="card-user-texto" class="card-legenda">Logar<br>Cadastrar</span>
+                    </a>
+                </div>
+            
+                <div class="card">
+                    <a href="#" class="linkCard">
+                    <img src="galeria/prancheta.jpeg" alt="Prancheta" class="img-card">
+                    <span class="card-legenda">Cadastrar<br>Bolão</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/crachas.png" alt="Crachás" class="img-card">
+                        <span class="card-legenda">Cadastrar<br>Participante</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/teclado.jpg" alt="Teclado" class="img-card">
+                        <span class="card-legenda">Cadastrar<br>Palpites</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </main>
+
+    <!-- MODAL LOGIN -->
+
+    <div id="modalLogin" class="modal hidden">
+
+        <div class="modal-content">
+
+            <span id="closeModal" class="close">&times;</span>
+
+            <form id="loginForm" class="form-user">
+
+                <h2 class="form-titulo">Acesso à Plataforma</h2>
+
+                <label for="user-id">E-mail:</label>
+                <input type="email" id="user-id" name="user" required />
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="pass" required />
+
+                <button type="submit">Entrar</button>
+                    <div class="resgatar">
+                        <a href="#" id="link-registro" class="btn-link">Registrar</a>
+                        <a href="#" id="link-esqueci" class="btn-link">Esqueci a senha</a>
+                    </div>
+            </form>
+
+            <form id="registerForm" class="form-user hidden">
+
+                <h2 class="form-titulo">Efetuar Cadastro</h2>
+
+                <label for="reg-nome">Nome (mínimo 5 caracteres):</label>
+                <input type="text" id="reg-nome" name="reg-nome" required />
+
+                <label for="reg-user-id">E-mail para Cadastro:</label>
+                <input type="email" id="reg-user-id" name="reg-user" required />
+
+                <label for="reg-pass">Senha (mínimo 6 caracteres):</label>
+                <input type="password" id="reg-pass" name="reg-pass" required />
+
+                <label for="reg-pass-confirm">Confirmar Senha:</label>
+                <input type="password" id="reg-pass-confirm" name="reg-pass-confirm" required />
+
+                <button type="submit">Registrar</button>
+            
+            </form>
+
+            <form id="esqueciForm" class="form-user hidden">
+
+                <h2 class="form-titulo">Esqueci a senha</h2>
+
+                <label for="esqueci-email">E-mail para Recuperação:</label>
+                <input type="email" id="esqueci-email" name="emailRecuperar" required />
+
+                <button type="submit">Submeter</button>
+            
+            </form>
+
+            <div class="mensagem" id="mensagem"></div>
+
+        </div>
+
+    </div>
+
+    <!-- FIM Modal Login -->
+
+    <!-- MODAL FOTO -->
+
+    <div id="modalFoto" class="modal ocultar">
+        <div class="modal-content">
+
+            <span id="closeModalPic" class="close">&times;</span>
+
+            <h2 class="secao-titulo">Alterar Foto</h2>
+
+            <div class="preview-area">
+                <img id="previewFoto" src="galeria/fotopreview.jpg" alt="Moldura" class="preview"/>
+            </div>
+
+            <input type="file" id="inputFoto" accept="image/*" class="ocultar">
+
+            <div class="btn-upload">
+                <button class="btnFormFoto" id="btnEscolherFoto">Escolher Foto</button>
+                <button class="btnFormFoto" id="btnEnviarFoto">Enviar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FIM Modal Foto -->
+
+
+        <!-- AUTENTICAÇÃO -->
+
+        <script type="module" src="auth.js"></script>
+
+        <!-- FIM Autenticação -->
+
+    
+</body>
+</html>
