@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
 
 :root {
---stormyteal: #16697A;
---pacificblue: #489FB5;
---skyblue: #82C0CC;
---parchment: #EDE7E3;
+--palesky: #B9D6F2;
+--prussianblue: #061A40;
+--saphire: #0353A4;
+--cornflowerocean: #006DAA;
+--deepspaceblue: #003559;
+
 --amberglow: #FFA62B;
 
 --azulcinza: #5A5A5A; 
@@ -22,16 +24,19 @@ value from 400 to 700 */
 
 body {
   font-family: "Monda", sans-serif;
-  background-color: #489FB5;
+  background-color: #003559;
 }
 
 .tituloPrincipal {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
 }
 
 .titleArea img {
   height: 120px;
+  padding: 6px;
 }
 
 /* BLOCOS */
@@ -39,7 +44,7 @@ body {
 /* Título da seção */
 .secao-titulo {
   margin-top: 12px;
-  color: #82C0CC;
+  color: #B9D6F2;
   font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
@@ -49,8 +54,8 @@ body {
 .cards-container {
     position: relative;
     width: 45%;
-    margin: 0 auto;
-    background-color:#16697A;
+    margin: 12px auto;
+    background-color:#006DAA;
     border: 2px solid;
     border-radius: 15px;
     border-color: #16697A;
@@ -83,7 +88,8 @@ body {
 }
 
 .card {
-    background: #82C0CC;
+    background: #B9D6F2;
+    color: #061A40;
     width: 120px;
     padding: 15px;
     border-radius: 15px;
@@ -299,10 +305,50 @@ body {
     text-decoration: underline;
 }
 
-
-
-
 /* FIM Formulários */
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 800px) {
+
+  /* Container se adapta totalmente */
+  .cards-container {
+    width: 90%;
+    margin: 20px auto;
+    padding-bottom: 20px;
+  }
+
+  /* Ícones alinhados com mais espaço */
+  .cam-sair {
+    top: 5px;
+    right: 5px;
+  }
+
+  .cam-sair .icon {
+    width: 24px;
+  }
+
+  /* Deixar os cards mais amigáveis ao mobile */
+  .cards-bloco {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card, .card-alternativo {
+    width: 100px;   /* reduz para caber melhor */
+    padding: 12px;
+  }
+
+  .img-card {
+    height: 70px;
+  }
+
+  .card-legenda {
+    font-size: 0.9rem;
+  }
+
+}
 
 
 
