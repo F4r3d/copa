@@ -124,6 +124,22 @@ function mostrarEsqueci(event) {
 
 // FIM Altenância Formulário
 
+// MENU ABAS
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+
+        // trocar aba ativa
+        document.querySelector('.tab-btn.active').classList.remove('active');
+        btn.classList.add('active');
+
+        // trocar conteúdo ativo
+        const tabId = btn.getAttribute('data-tab');
+        document.querySelector('.cards-container.active').classList.remove('active');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
+// FIM Menu Abas
+
 
 
 

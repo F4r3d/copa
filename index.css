@@ -10,6 +10,8 @@
 --amberglow: #FFA62B;
 
 --azulcinza: #5A5A5A; 
+
+--branco: #FAFAFA;
 }
 
 /* font-family: "Monda", sans-serif;
@@ -51,15 +53,59 @@ body {
 }
 
 /* Container dos cards */
+
+
+/* MENU DE ABAS */
+.tabs-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    border-bottom: 1px solid #FAFAFA;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 6px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #FAFAFA;
+    transition: color .25s ease;
+}
+
+.tab-btn.active {
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid #FAFAFA;
+}
+
+/* CONTEÚDO DAS ABAS */
 .cards-container {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .3s ease, transform .3s ease;
+    padding: 20px 10px;
+
     position: relative;
-    width: 45%;
+    width: 50%;
     margin: 12px auto;
     background-color:#006DAA;
     border: 2px solid;
     border-radius: 15px;
     border-color: #16697A;
 }
+
+.cards-container.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+/* FIM Menu de Abas */
+
 
 .cam-sair {
     position: absolute;
@@ -74,6 +120,7 @@ body {
     width: 30px;
     cursor: pointer;
 }
+
 
 .ocultar {
     display: none;

@@ -16,11 +16,21 @@
     </header>
 
     <main>
-        <div class="cards-container">
 
-            <h2 class="secao-titulo">Área do Participante</h2>
+        <div class="tabs-menu">
+            <button class="tab-btn active" data-tab="cadastro">Área de Cadastro</button>
+            <button class="tab-btn" data-tab="participante">Área do Participante</button>
+            <button class="tab-btn" data-tab="copa">Copa 2026</button>
+            <button class="tab-btn" data-tab="fases">Fases</button>
+            <button class="tab-btn" data-tab="resumo">Resumo</button>
+        </div>
 
-             <div class="cam-sair">
+
+        <div class="cards-container active" id="cadastro">
+
+            <h2 class="secao-titulo">Área de Cadastro</h2>
+
+            <div class="cam-sair">
                 <img src="galeria/cam.png" id="btnFoto" class="icon ocultar" />
                 <img src="galeria/turnoff.png" id="btnLogout" class="icon ocultar" />
             </div>
@@ -59,7 +69,7 @@
 
         </div>
 
-        <div class="cards-container">
+        <div class="cards-container" id="copa">
 
             <h2 class="secao-titulo">Copa do Mundo 2026</h2>
 
@@ -96,6 +106,7 @@
             </div>
 
         </div>
+
     
     </main>
 
