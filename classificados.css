@@ -82,21 +82,23 @@ h2 {
   text-align: center;
 }
 
-div {
-    display: grid; /* ou flex */
-    grid-template-columns: repeat(8, 1fr); /* só se for grid */
-    gap: 3px;
-    justify-content: start;
-    padding: 12px;
+.selecoes {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+    width: fit-content;
+    margin: 30px auto;
 }
 
 .cardBandeira {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
-img {
+.cardBandeira img {
     width: 48px;
     height: auto;
     object-fit: contain;
@@ -107,10 +109,16 @@ img:hover {
     transform: scale(1.1);
 }
 
-p {
-   margin-left: 10px;
-   font-family: "DM Sans", sans-serif;
+.cardBandeira p {
+   font-family: "Monda", sans-serif;
    font-size: 16px;
    font-style: normal;
    color: #FAFAFA;
+}
+
+@media (max-width: 800px) {
+  .selecoes {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 30px auto;
+    }
 }
