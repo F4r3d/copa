@@ -119,6 +119,7 @@ img:hover {
 @media (max-width: 800px) {
   .selecoes {
         grid-template-columns: repeat(4, 1fr);
-        margin: 30px auto;
+        column-gap: 18px;
+        padding: 0 18px;
     }
 }

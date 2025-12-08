@@ -18,17 +18,15 @@
     <main>
 
         <div class="tabs-menu">
-            <button class="tab-btn active" data-tab="cadastro">Área de Cadastro</button>
-            <button class="tab-btn" data-tab="participante">Área do Participante</button>
+            <button class="tab-btn active" data-tab="bolao">Bolão</button>
             <button class="tab-btn" data-tab="copa">Copa 2026</button>
             <button class="tab-btn" data-tab="fases">Fases</button>
-            <button class="tab-btn" data-tab="resumo">Resumo</button>
+            <button class="tab-btn" data-tab="cadastro">Cadastro</button>
         </div>
 
+        <div class="cards-container active" id="bolao">
 
-        <div class="cards-container active" id="cadastro">
-
-            <h2 class="secao-titulo">Área de Cadastro</h2>
+            <h2 class="secao-titulo">Área do Bolão</h2>
 
             <div class="cam-sair">
                 <img src="galeria/cam.png" id="btnFoto" class="icon ocultar" />
@@ -40,28 +38,28 @@
                 <div id="cardLogin" class="card">
                     <a href="#" class="linkCard" id="exibir-form">
                     <img id="card-user-foto" src="galeria/user.png" alt="Login" class="img-card">
-                    <span id="card-user-texto" class="card-legenda">Logar<br>Cadastrar</span>
+                    <span id="card-user-texto" class="card-legenda">Ranking</span>
                     </a>
                 </div>
             
                 <div class="card">
                     <a href="#" class="linkCard">
                     <img src="galeria/prancheta.jpeg" alt="Prancheta" class="img-card">
-                    <span class="card-legenda">Cadastrar<br>Bolão</span>
+                    <span class="card-legenda">Participantes</span>
                     </a>
                 </div>
 
                 <div class="card">
                     <a href="#" class="linkCard">
                         <img src="galeria/crachas.png" alt="Crachás" class="img-card">
-                        <span class="card-legenda">Cadastrar<br>Participante</span>
+                        <span class="card-legenda">Palpites</span>
                     </a>
                 </div>
 
                 <div class="card">
                     <a href="#" class="linkCard">
                         <img src="galeria/teclado.jpg" alt="Teclado" class="img-card">
-                        <span class="card-legenda">Cadastrar<br>Palpites</span>
+                        <span class="card-legenda">Regras</span>
                     </a>
                 </div>
 
@@ -100,6 +98,95 @@
                     <a href="#" class="linkCard">
                         <img src="galeria/tabela.png" alt="Classificação" class="img-card">
                         <span class="card-legenda">Tabela de<br>Classificação</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cards-container" id="fases">
+
+            <h2 class="secao-titulo">Fases</h2>
+
+            <div class="cards-bloco">
+    
+                <div class="card">
+                    <a href="classificados.html" class="linkCard">
+                    <img src="galeria/earth.jpg" alt="Planeta" class="img-card">
+                    <span class="card-legenda">Rodada<br>de 32</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/grupos.png" alt="Crachás" class="img-card">
+                        <span class="card-legenda">Oitavas<br>de Final</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/fase_grupos.png" alt="Fase Grupos" class="img-card">
+                        <span class="card-legenda">Quartas<br>de Final</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/tabela.png" alt="Classificação" class="img-card">
+                        <span class="card-legenda">Semifinais</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/tabela.png" alt="Classificação" class="img-card">
+                        <span class="card-legenda">Finais</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="cards-container" id="cadastro">
+
+            <h2 class="secao-titulo">Área de Cadastro</h2>
+
+            <div class="cam-sair">
+                <img src="galeria/cam.png" id="btnFoto" class="icon ocultar" />
+                <img src="galeria/turnoff.png" id="btnLogout" class="icon ocultar" />
+            </div>
+
+            <div class="cards-bloco">
+
+                <div id="cardLogin" class="card">
+                    <a href="#" class="linkCard" id="exibir-form">
+                    <img id="card-user-foto" src="galeria/user.png" alt="Login" class="img-card">
+                    <span id="card-user-texto" class="card-legenda">Logar<br>Cadastrar</span>
+                    </a>
+                </div>
+            
+                <div class="card">
+                    <a href="#" class="linkCard">
+                    <img src="galeria/prancheta.jpeg" alt="Prancheta" class="img-card">
+                    <span class="card-legenda">Cadastrar<br>Bolão</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/crachas.png" alt="Crachás" class="img-card">
+                        <span class="card-legenda">Cadastrar<br>Participante</span>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" class="linkCard">
+                        <img src="galeria/teclado.jpg" alt="Teclado" class="img-card">
+                        <span class="card-legenda">Cadastrar<br>Palpites</span>
                     </a>
                 </div>
 
