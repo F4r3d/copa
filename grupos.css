@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+
+:root {
+--palesky: #B9D6F2;
+--prussianblue: #061A40;
+--saphire: #0353A4;
+--cornflowerocean: #006DAA;
+--deepspaceblue: #003559;
+
+--amberglow: #FFA62B;
+
+--azulcinza: #5A5A5A; 
+
+--branco: #FAFAFA;
+}
+
+/* font-family: "Monda", sans-serif;
+value from 400 to 700 */
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Monda", sans-serif;
+  background-color: #003559;
+}
+
+/* TÍTULOS DAS PÁGINAS */
+
+.tituloPrincipal {
+  position: sticky;
+  height: 60px;
+  /* background-color: #17222B; */
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  justify-content: space-between;
+}
+
+.logoArea {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.menuArea {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.logoHome {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logoHome:hover {
+    transform: scale(1.1);
+}
+
+.logoMenu {
+  height: 32px;
+  cursor: pointer;
+}
+
+.titleArea {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  top: 0;
+  /* background-color: #17222B; */
+  color: #FBF8F0;
+  z-index: 1000;
+  padding: 10px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* FIM ______ TÍTULOS DAS PÁGINAS */
+
+.gridGrupos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 6px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
+.grupo {
+  background-color: #17222B;
+  border-radius: 8px;
+  border: 1px solid #FBF8F0;
+  padding: 3px;
+}
+
+.grupo h3 {
+  text-align: center;
+  color: #FAFAFA;
+}
+
+.grupo ul {
+  list-style: none;
+  padding: 3px;
+}
+
+.grupo li {
+  background-color: #17222B;
+  color: #FBF8F0;
+  margin: 3px 0;
+  padding: 3px;
+  border: 1px solid #FBF8F0;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.bandeira {
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+  .gridGrupos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
