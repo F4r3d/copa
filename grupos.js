@@ -20,9 +20,9 @@ const grupos = [
     },
     {
         id: "A4",
-        selecao: "República Tcheca/Irlanda/Dinamarca/Macedônia do Norte",
+        selecao: "Europa D",
         bandeira: "onu.png",
-        alt: "Bandeira República Tcheca/Irlanda/Dinamarca/Macedônia do Norte",
+        alt: "Bandeira Europa D",
     },
     {
         id: "B1",
@@ -32,9 +32,9 @@ const grupos = [
     },
     {
         id: "B2",
-        selecao: "Itália/Irlanda do Norte/País de Gales/Bósnia",
+        selecao: "Europa A",
         bandeira: "onu.png",
-        alt: "Bandeira Itália/Irlanda do Norte/País de Gales/Bósnia",
+        alt: "Bandeira Europa A",
     },
     {
         id: "B3",
@@ -92,9 +92,9 @@ const grupos = [
     },
     {
         id: "D4",
-        selecao: "Turquia/Romênia/Eslováquia/Kosovo",
+        selecao: "Europa C",
         bandeira: "onu.png",
-        alt: "Bandeira Turquia/Romênia/Eslováquia/Kosovo",
+        alt: "Bandeira Europa C",
     },
     {
         id: "E1",
@@ -134,9 +134,9 @@ const grupos = [
     },
     {
         id: "F3",
-        selecao: "Ucrânia/Suécia/Polônia/Albânia",
+        selecao: "Europa B",
         bandeira: "onu.png",
-        alt: "Bandeira Ucrânia/Suécia/Polônia/Albânia",
+        alt: "Bandeira Europa B",
     },
     {
         id: "F4",
@@ -206,9 +206,9 @@ const grupos = [
     },
     {
         id: "I3",
-        selecao: "Bolívia/Suriname/Iraque",
+        selecao: "Intercontinental 2",
         bandeira: "onu.png",
-        alt: "Bandeira Bolívia/Suriname/Iraque",
+        alt: "Bandeira Intercontinental 2",
     },
     {
         id: "I4",
@@ -248,9 +248,9 @@ const grupos = [
     },
     {
         id: "K2",
-        selecao: "Congo/Jamaica/Nova Caledônia",
+        selecao: "Intercontinental 1",
         bandeira: "onu.png",
-        alt: "Bandeira Congo/Jamaica/Nova Caledônia",
+        alt: "Bandeira Intercontinental 1",
     },
     {
         id: "K3",
@@ -292,18 +292,19 @@ const grupos = [
 ];
 
 
+
 // GRUPOS
 grupos.forEach((pais) => {
-  const elemento = document.getElementById(pais.id);
+    const elemento = document.getElementById(pais.id);
 
-  // Altera o texto
-  const nomeSpan = elemento.querySelector("span");
-  nomeSpan.textContent = pais.selecao;
+    // Altera o texto
+    const nomeSpan = elemento.querySelector("span");
+    nomeSpan.textContent = pais.selecao;
 
-  // Altera a imagem
-  const img = elemento.querySelector("img");
-  img.src = `bandeiras/${pais.bandeira}`;
-  img.alt = pais.alt;
+    // Altera a imagem
+    const img = elemento.querySelector("img");
+    img.src = `bandeiras/${pais.bandeira}`;
+    img.alt = pais.alt;
 
 });
 // FIM Grupos

@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* // <weight>: Use a value from 100 to 1000
+// <uniquifier>: Use a unique and descriptive class name
+
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* CSS HEX */
+:root {
+--escuro: #17222B;
+--vermelho: #86373E;
+--darklaranja: #BF6F31;
+--laranja: #F1BD78;
+--nude: #EFD9C7;
+--claro: #FBF8F0;
+}
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17222B;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  color: #FBF8F0;
+}
+
+/* TÍTULOS DAS PÁGINAS */
+
+.tituloPrincipal {
+  position: sticky;
+  height: 60px;
+  background-color: #17222B;
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  justify-content: space-between;
+}
+
+.logoArea {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.menuArea {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.logoHome {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logoHome:hover {
+    transform: scale(1.1);
+}
+
+.logoMenu {
+  height: 32px;
+  cursor: pointer;
+}
+
+.titleArea {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  top: 0;
+  background-color: #17222B;
+  color: #FBF8F0;
+  z-index: 1000;
+  padding: 10px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* FIM ______ TÍTULOS DAS PÁGINAS */
+
+.chaveamento {
+  display: grid;
+  grid-template-columns: 130px 130px 130px 130px 240px 130px 130px 130px 130px;
+  gap: 3px;
+  align-items: start;
+  padding-left: 24px;
+  padding-right: 24px;
+
+}
+
+.fase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* MATEMÁTICA CHAVEAMENTO */
+.oitavas-E .jogo:nth-child(1) {
+  margin-top: 10px; 
+}
+.oitavas-E .jogo:nth-child(2) { 
+  margin-top: 102px;
+}
+
+.time-oitavas:first-child {
+  position: relative;
+  top: -9px; /* Sobe um pouquinho dentro da caixa */
+}
+
+.time-oitavas:last-child {
+  position: relative;
+  top: 1px; /* Desce um pouquinho dentro da caixa */
+}
+
+.time-quartas:first-child {
+  position: relative;
+  top: -18px; /* Sobe um pouquinho dentro da caixa */
+}
+
+.time-quartas:last-child {
+  position: relative;
+  top: 0px; /* Desce um pouquinho dentro da caixa */
+}
+
+.time-semi:first-child {
+  position: relative;
+  top: -26px; /* Sobe um pouquinho dentro da caixa */
+}
+
+.time-semi:last-child {
+  position: relative;
+  top: -3px; /* Desce um pouquinho dentro da caixa */
+}
+
+/* .jogo-round32, .jogo-oitavas, .jogo-quartas, .jogo-semi, .final, .fase.finais {
+  outline: 1px dashed red;
+} */
+
+/* FIM MATEMÁTICA CHAVEAMENTO */
+
+/* SVG */
+
+.fluxograma-svg {
+  position: absolute;
+  top: 63px;
+  left: 102px; /* ajuste conforme sua largura de bloco dos times */
+  pointer-events: none; /* pra não atrapalhar cliques */
+  z-index: 1; /* se quiser que fique por cima das caixas */
+}
+
+/* FIM SVG */
+
+.jogo-round32 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3px 6px;
+  margin: 2px 0;
+  border-radius: 6px;
+  width: 102px;
+}
+
+.jogo-oitavas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6px;
+  margin: 7px 0;
+  border-radius: 6px;
+  width: 102px;
+}
+
+.jogo-quartas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6px;
+  margin: 16px 0;
+  border-radius: 6px;
+  width: 102px;
+}
+
+.jogo-semi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6px;
+  margin: 21px 0;
+  border-radius: 6px;
+  width: 102px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  padding: 3px ;
+  margin: 2px 0;
+  border: 1px solid #FBF8F0;
+  border-radius: 6px;
+  width: 90px;
+}
+
+.time-oitavas {
+  display: flex;
+  align-items: center;
+  padding: 3px ;
+  margin: 16px 0;
+  border: 1px solid #FBF8F0;
+  border-radius: 6px;
+  width: 90px;
+}
+
+.time-quartas {
+  display: flex;
+  align-items: center;
+  padding: 3px ;
+  margin: 48px 0;
+  border: 1px solid #FBF8F0;
+  border-radius: 6px;
+  width: 90px;
+}
+
+.time-semi {
+  display: flex;
+  align-items: center;
+  padding: 3px ;
+  margin: 120px 0;
+  border: 1px solid #FBF8F0;
+  border-radius: 6px;
+  width: 90px;
+}
+
+/* FINAIS */
+
+/* .fase.finais {
+  outline: 2px dashed red;
+}
+.fase:nth-child(6) {
+  outline: 2px dashed blue;
+}
+
+.fase {
+  background-color: rgba(255, 0, 0, 0.1);
+} */
+
+/* .fase.semi-E {
+  outline: 2px dashed red;
+  background-color: rgba(255, 255, 0, 0.1); 
+}
+
+.fase.semi-D {
+  outline: 2px dashed red;
+  background-color: rgba(255, 255, 0, 0.1);
+}
+
+.fase.quartas-E {
+  outline: 2px dashed red;
+  background-color: rgba(255, 255, 0, 0.1);
+}
+
+.fase.quartas-D {
+  outline: 2px dashed red;
+  background-color: rgba(255, 255, 0, 0.1);
+}
+
+.fase.oitavas-E {
+  outline: 2px dashed red;
+  background-color: rgba(255, 255, 0, 0.1);
+}
+
+.fase.oitavas-D {
+  outline: 2px dashed red;
+  background-color: rgba(255, 255, 0, 0.1);
+} */
+
+
+
+
+.fase.finais {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* centraliza verticalmente */
+  height: 84vh; /* altura da tela ou do container pai */
+  gap: 36px;
+}
+
+.trofeu {
+  display: flex;
+  justify-content: center;
+}
+
+.logo26 {
+  height: 48px;
+}
+
+.finais .final {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.finais .finalista {
+  border-radius: 6px;
+  border: 1px solid #FBF8F0;
+  text-align: center;
+}
+
+.finalista {
+  display: flex;
+  align-items: center;
+  padding: 3px ;
+  margin: 2px 0;
+  border: 1px solid #FBF8F0;
+  border-radius: 6px;
+  width: 90px;
+}
+
+.fase .primeiro,
+.fase .segundo,
+.fase .terceiro,
+.fase .quarto {
+  display: flex;
+  align-items: center;
+  padding: 3px ;
+  margin: 0 auto;
+  border: 1px solid #FBF8F0;
+  border-radius: 6px;
+  width: 99px;
+  text-align: center;
+}
+
+.colocacao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* FIM FINAIS */
+
+.bandeira {
+  width: 24px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.nome {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.posicao1 {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.bandeira1 {
+  width: 27px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.nome1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.posicao2 {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.bandeira2 {
+  width: 24px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.nome2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.posicao3 {
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.bandeira3 {
+  width: 24px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.nome3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.posicao4 {
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.bandeira4 {
+  width: 24px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.nome4 {
+  font-size: 14px;
+  font-weight: 500;
+}

@@ -155,139 +155,181 @@ const classificados = [
     },
     {
         id: 23,
+        selecao: "Europa A",
+        bandeira: "onu.png",
+        continente: "Europa",
+        sigla: "ONU",
+    },
+    {
+        id: 24,
+        selecao: "Europa B",
+        bandeira: "onu.png",
+        continente: "Europa",
+        sigla: "ONU",
+    },
+    {
+        id: 25,
+        selecao: "Europa C",
+        bandeira: "onu.png",
+        continente: "Europa",
+        sigla: "ONU",
+    },
+    {
+        id: 26,
+        selecao: "Europa D",
+        bandeira: "onu.png",
+        continente: "Europa",
+        sigla: "ONU",
+    },
+    {
+        id: 27,
         selecao: "França",
         bandeira: "franca.png",
         continente: "Europa",
         sigla: "FRA",
     },
     {
-        id: 24,
+        id: 28,
         selecao: "Gana",
         bandeira: "gana.png",
         continente: "África",
         sigla: "GHA",
     },
     {
-        id: 25,
+        id: 29,
         selecao: "Haiti",
         bandeira: "haiti.png",
         continente: "América Central e Caribe",
         sigla: "HTI",
     },
     {
-        id: 26,
+        id: 30,
         selecao: "Holanda",
         bandeira: "holanda.png",
         continente: "Europa",
         sigla: "NLD",
     },
     {
-        id: 27,
+        id: 31,
         selecao: "Inglaterra",
         bandeira: "inglaterra.png",
         continente: "Europa",
         sigla: "ENG",
     },
     {
-        id: 28,
+        id: 32,
+        selecao: "Intercontinental 1",
+        bandeira: "onu.png",
+        continente: "A definir",
+        sigla: "ONU",
+    },
+    {
+        id: 33,
+        selecao: "Intercontinental 2",
+        bandeira: "onu.png",
+        continente: "A definir",
+        sigla: "ONU",
+    },
+    {
+        id: 34,
         selecao: "Irã",
         bandeira: "ira.png",
         continente: "Ásia",
         sigla: "IRN",
     },
     {
-        id: 29,
+        id: 35,
         selecao: "Japão",
         bandeira: "japao.png",
         continente: "Ásia",
         sigla: "JPN",
     },
     {
-        id: 30,
+        id: 36,
         selecao: "Jordânia",
         bandeira: "jordania.png",
         continente: "Ásia",
         sigla: "JOR",
     },
     {
-        id: 31,
+        id: 37,
         selecao: "Marrocos",
         bandeira: "marrocos.png",
         continente: "África",
         sigla: "MAR",
     },
     {
-        id: 32,
+        id: 38,
         selecao: "México",
         bandeira: "mexico.png",
         continente: "América do Norte",
         sigla: "MEX",
     },
     {
-        id: 33,
+        id: 39,
         selecao: "Noruega",
         bandeira: "noruega.png",
         continente: "Europa",
         sigla: "NOR",
     },
     {
-        id: 34,
+        id: 40,
         selecao: "Nova Zelândia",
         bandeira: "novazelandia.png",
         continente: "Oceania",
         sigla: "NZL",
     },
     {
-        id: 35,
+        id: 41,
         selecao: "Panamá",
         bandeira: "panama.png",
         continente: "América Central e Caribe",
         sigla: "PAN",
     },
     {
-        id: 36,
+        id: 42,
         selecao: "Paraguai",
         bandeira: "paraguai.png",
         continente: "América do Sul",
         sigla: "PRY",
     },
     {
-        id: 37,
+        id: 43,
         selecao: "Portugal",
         bandeira: "portugal.png",
         continente: "Europa",
         sigla: "PRT",
     },
     {
-        id: 38,
+        id: 44,
         selecao: "Senegal",
         bandeira: "senegal.png",
         continente: "África",
         sigla: "SEN",
     },
     {
-        id: 39,
+        id: 45,
         selecao: "Suíça",
         bandeira: "suica.png",
         continente: "Europa",
         sigla: "CHE",
     },
     {
-        id: 40,
+        id: 46,
         selecao: "Tunísia",
         bandeira: "tunisia.png",
         continente: "África",
         sigla: "TUN",
     },
     {
-        id: 41,
+        id: 47,
         selecao: "Uruguai",
         bandeira: "uruguai.png",
         continente: "América do Sul",
         sigla: "URY",
     },
     {
-        id: 42,
+        id: 48,
         selecao: "Uzbequistão",
         bandeira: "uzbequistao.png",
         continente: "Europa",
@@ -296,30 +338,31 @@ const classificados = [
 ];
 
 
+
 // CLASSIFICADOS
 const lista = document.getElementById("lista-selecoes");
 
 const selecoesOrdenadas = classificados
-  .map(sel => sel.selecao)
-  .sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    .map(sel => sel.selecao)
+    .sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
 selecoesOrdenadas.forEach(nome_pais => {
-  const dadosSelecao = classificados.find(sel => sel.selecao === nome_pais);
+    const dadosSelecao = classificados.find(sel => sel.selecao === nome_pais);
 
-  const card = document.createElement("div");
-  card.className = "cardBandeira";
+    const card = document.createElement("div");
+    card.className = "cardBandeira";
 
-  const imagem = document.createElement("img");
-  imagem.src = "bandeiras/" + dadosSelecao.bandeira;
-  imagem.alt = nome_pais;
+    const imagem = document.createElement("img");
+    imagem.src = "bandeiras/" + dadosSelecao.bandeira;
+    imagem.alt = nome_pais;
 
-  const nomeSelecao = document.createElement("p");
-  nomeSelecao.textContent = nome_pais;
+    const nomeSelecao = document.createElement("p");
+    nomeSelecao.textContent = nome_pais;
 
-  card.appendChild(imagem);
-  card.appendChild(nomeSelecao);
+    card.appendChild(imagem);
+    card.appendChild(nomeSelecao);
 
-  lista.appendChild(card);
+    lista.appendChild(card);
 });
 // FIM Classificados
 
